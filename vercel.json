@@ -1,9 +1,8 @@
 {
-  "version": 2,
-  "functions": {
-    "bot": {
-      "runtime": "nodejs14.x",
-      "events": ["http"]
-    }
-  }
+"version": 2,
+"functions": {
+"bot": {
+"runtime": "nodejs14.x"
+}
+}
 }
