@@ -2,9 +2,9 @@
   "name": "telegram-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "bot.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "vercel build && vercel start",
     "build": "echo 'Building...'"
   },
   "dependencies": {
