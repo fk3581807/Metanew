@@ -1,6 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const TelegramBot = require('node-telegram-bot-api');
+const path = require('path');
+
 const app = express();
 
 const token = process.env.TELEGRAM_BOT_TOKEN;
@@ -31,6 +33,7 @@ bot.on('message', (msg) => {
     }
   }
 });
+
 // Extract file ID from Google Drive link
 function extractFileId(link) {
   const regex = /\/file\/d\/([a-zA-Z0-9_-]+)/;
@@ -38,6 +41,9 @@ function extractFileId(link) {
   return match && match[1];
 }
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.listen(process.env.PORT, () => {
   console.log(`Server listening on port ${process.env.PORT}`);
 });
+``}
