@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "routes": [
-    {
-      "src": "/bot",
-      "dest": "server.js"
+  "functions": {
+    "bot": {
+      "runtime": "nodejs14.x",
+      "handler": "server.js",
+      "events": ["http"]
     }
-  ]
+  }
 }
